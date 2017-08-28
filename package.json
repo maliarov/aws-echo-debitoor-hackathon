@@ -1,0 +1,24 @@
+{
+  "name": "aws-echo-debitoor-hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mujichOk/aws-echo-debitoor-hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mujichOk/aws-echo-debitoor-hackathon/issues"
+  },
+  "homepage": "https://github.com/mujichOk/aws-echo-debitoor-hackathon#readme",
+  "dependencies": {
+    "alexa-app": "4.1.0",
+    "express": "4.15.4"
+  }
+}
