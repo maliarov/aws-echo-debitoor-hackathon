@@ -32,8 +32,10 @@ alexaApp.intent('getUnpaidInvoicesCount', {
     'slots': { },
     'utterances': [
         'get unpaid invoices count',
-        'unpaid invoices count'
-    ]
+        'unpaid invoices count',
+        'for unpaid invoices count',
+        'how many unpaid invoices do I have'
+     ]
   },
   (req, res) => {
     res.say('You have one unpaid invoice!');
