@@ -30,6 +30,6 @@ function handler({ req, res, expressApp, alexaApp, expressWs }) {
 
     expressWs.getWss('/commands').clients
         .forEach((client) => {
-            client.send({command: 'navigate::projects'});
+            client.send(JSON.stringify({command: 'navigate::projects'}));
         });
 }
