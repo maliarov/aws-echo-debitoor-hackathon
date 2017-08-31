@@ -46,11 +46,11 @@ alexaApp.intent('getUnpaidInvoicesCount', {
 );
 */
 
-require('./commands/openProjects').use({expressApp, alexaApp, expressWs});
+require('./commands/openProjects').use({ expressApp, alexaApp, expressWs });
 
 expressApp.ws('/commands', (ws, req) => {
   ws.on('message', (msg) => {
-    ws.send({command:'ping'});
+    ws.send(JSON.stringify({ command: 'ping' }));
     console.log(msg);
   });
 });
