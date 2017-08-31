@@ -28,13 +28,13 @@ module.exports = {
 function handler({ req, res, expressApp, alexaApp, expressWs }) {
     res.say('Ok');
 
-    const path = req.slot('path');
-    if (path === 'index') {
-        path = '';
+    const pathSlot = res.slots('path');
+    if (pathSlot.value === 'index') {
+        pathSlot.value = '';
     }
 
     expressWs.getWss('/commands').clients
         .forEach((client) => {
-            client.send(JSON.stringify({command: 'navigate', path: `/${path}`}));
+            client.send(JSON.stringify({command: 'navigate', path: `/${pathSlot.path}`}));
         });
 }
