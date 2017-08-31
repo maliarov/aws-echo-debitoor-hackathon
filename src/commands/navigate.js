@@ -38,6 +38,6 @@ function handler({ req, res, expressApp, alexaApp, expressWs }) {
 
     expressWs.getWss('/commands').clients
         .forEach((client) => {
-            client.send(JSON.stringify({command: 'navigate', path: `/${pathSlot.path}`}));
+            client.send(JSON.stringify({command: 'navigate', path: `/${pathSlot.value}`}));
         });
 }
