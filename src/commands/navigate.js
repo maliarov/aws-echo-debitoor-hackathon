@@ -26,7 +26,7 @@ module.exports = {
 };
 
 function handler({ req, res, expressApp, alexaApp, expressWs }) {
-    const path = request.slot('path');
+    const path = req.slot('path');
 
     res.say('Ok');
 
