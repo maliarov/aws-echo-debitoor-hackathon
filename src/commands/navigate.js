@@ -26,9 +26,12 @@ module.exports = {
 };
 
 function handler({ req, res, expressApp, alexaApp, expressWs }) {
-    const path = req.slot('path');
-
     res.say('Ok');
+
+    const path = req.slot('path');
+    if (path === 'index') {
+        path = '';
+    }
 
     expressWs.getWss('/commands').clients
         .forEach((client) => {
