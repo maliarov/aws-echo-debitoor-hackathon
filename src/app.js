@@ -46,7 +46,8 @@ alexaApp.intent('getUnpaidInvoicesCount', {
 );
 */
 
-require('./commands/openProjects').use({ expressApp, alexaApp, expressWs });
+// require('./commands/navigateProjects').use({ expressApp, alexaApp, expressWs });
+require('./commands/navigate').use({ expressApp, alexaApp, expressWs });
 
 expressApp.ws('/commands', (ws, req) => {
   ws.on('message', (msg) => {
