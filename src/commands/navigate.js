@@ -28,7 +28,7 @@ module.exports = {
 function handler({ req, res, expressApp, alexaApp, expressWs }) {
     res.say('Ok');
 
-    const pathSlot = res.slots('path');
+    const pathSlot = res.slots['path'];
 
     console.log('path slot', pathSlot);
 
